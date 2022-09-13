@@ -18,25 +18,25 @@
 
 - 📅 Date: 2022-09-19
 - 🧑‍ Facilitator: Joy
-- 🚀 [Getting Started](#Part-I-Practicing-JavaScript-ES6-Array-Methods-with-Unit-Testing-1)
+- 🚀 [Getting Started](#part-i-practicing-javascript-es6-array-methods-with-unit-testing-1)
 
 ### Part II: Knowing Functional Programming and Scaffolding a Modern JavaScript Library
 
 - 📅 Date: 2022-09-26
 - 🧑‍ Facilitator: William
-- 🚀 [Getting Started](#Part-II-Knowing-Functional-Programming-and-Scaffolding-a-Modern-JavaScript-Library-1)
+- 🚀 [Getting Started](#part-ii-knowing-functional-programming-and-scaffolding-a-modern-javascript-library-1)
 
 ###  Part III: Implementing of Higher-Order Functions with Test-Driven Development
 
 - 📅 Date: 2022-10-03
 - 🧑‍ Facilitator: Joy
-- 🚀 [Getting Started](#Part-III-Implementing-of-Higher-Order-Functions-with-Test-Driven-Development-1)
+- 🚀 [Getting Started](#part-iii-implementing-of-higher-order-functions-with-test-driven-development-1)
 
 ### Part IV: Implementing of Method Chaining with OOP
 
 - 📅 Date: 2022-10-17
 - 🧑‍ Facilitator: William
-- 🚀 [Getting Started](#Part-IV-Implementing-of-Method-Chaining-with-OOP-1)
+- 🚀 [Getting Started](#part-iv-implementing-of-method-chaining-with-oop-1)
 
 # Handbook
 
@@ -812,7 +812,7 @@ Run `test` command.
 ```bash
 npm run test
 
-🔴  FAIL  src/index.test.ts > method chaining
+🔴 FAIL  src/index.test.ts > method chaining
  ❯ src/index.test.ts:5:17
 TypeError: collect is not a function
 ```
