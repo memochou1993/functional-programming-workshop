@@ -18,25 +18,25 @@
 
 - 📅 Date: 2022-09-19
 - 🧑‍ Facilitator: Joy
-- 🚀 [Getting Started](#Part-I-Practicing-JavaScript-ES6-Array-Methods-with-Unit-Testing1)
+- 🚀 [Getting Started](#Part-I-Practicing-JavaScript-ES6-Array-Methods-with-Unit-Testing-1)
 
 ### Part II: Knowing Functional Programming and Scaffolding a Modern JavaScript Library
 
 - 📅 Date: 2022-09-26
 - 🧑‍ Facilitator: William
-- 🚀 [Getting Started](#Part-II-Knowing-Functional-Programming-and-Scaffolding-a-Modern-JavaScript-Library1)
+- 🚀 [Getting Started](#Part-II-Knowing-Functional-Programming-and-Scaffolding-a-Modern-JavaScript-Library-1)
 
 ###  Part III: Implementing of Higher-Order Functions with Test-Driven Development
 
 - 📅 Date: 2022-10-03
 - 🧑‍ Facilitator: Joy
-- 🚀 [Getting Started](#Part-III-Implementing-of-Higher-Order-Functions-with-Test-Driven-Development1)
+- 🚀 [Getting Started](#Part-III-Implementing-of-Higher-Order-Functions-with-Test-Driven-Development-1)
 
 ### Part IV: Implementing of Method Chaining with OOP
 
 - 📅 Date: 2022-10-17
 - 🧑‍ Facilitator: William
-- 🚀 [Getting Started](#Part-IV-Implementing-of-Method-Chaining-with-OOP1)
+- 🚀 [Getting Started](#Part-IV-Implementing-of-Method-Chaining-with-OOP-1)
 
 # Handbook
 
@@ -791,7 +791,7 @@ collect([1, 2, 3])
 
 ### Create a test case for "map" function
 
-Create a `index.test.ts` file in `src` folder.
+Create an `index.test.ts` file in `src` folder.
 
 ```js
 import { test, expect } from 'vitest';
@@ -807,9 +807,19 @@ test('method chaining', () => {
 });
 ```
 
+Run `test` command.
+
+```bash
+npm run test
+
+🔴  FAIL  src/index.test.ts > method chaining
+ ❯ src/index.test.ts:5:17
+TypeError: collect is not a function
+```
+
 ### Implement a "Collection" class
 
-Create a `index.ts` file in `src` folder.
+Create an `index.ts` file in `src` folder.
 
 ```js
 class Collection {
@@ -846,11 +856,7 @@ Implement a `toArray` function for the class, and return the `items` array.
 
 ```js
 class Collection {
-  private items;
-
-  constructor(items: Array<any>) {
-    this.items = items;
-  }
+  // ...
 
   toArray() {
     return this.items;
@@ -874,12 +880,8 @@ Run `test` command.
 
 ```bash
 npm run test
-```
 
-Run `coverage` command.
-
-```bash
-npm run coverage
+🟢 PASS  Waiting for file changes...
 ```
 
 ### Implement more functions for the class
@@ -894,3 +896,9 @@ npm run coverage
 - [ ] reject
 - [ ] size
 - [ ] some
+
+Run `coverage` command finally.
+
+```bash
+npm run coverage
+```
