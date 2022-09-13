@@ -920,7 +920,6 @@ Run `test` command.
 npm run test
 
 🔴 FAIL  src/index.test.ts > method chaining
- ❯ src/index.test.ts:5:17
 TypeError: collect is not a function
 ```
 
