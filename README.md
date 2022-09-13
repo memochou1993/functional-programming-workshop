@@ -1,92 +1,896 @@
 # Functional Programming Workshop
 
+## Topics
 
+- Functional Programming in JavaScript
+- Building a Modern JavaScript Library with Vite
+- Unit Testing with Jest and Vitest
 
-## Getting started
+## Procedure
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+- 📜 Check out the [slide](https://docs.google.com/presentation/d/14Navycm3I2oFvE0DdUNzVtvLhRRs1BM_V2xTy_azRt0/edit?usp=sharing)
+- 💪 Work in groups
+- 🔨 Collaborate with [Live Share](https://code.visualstudio.com/learn/collaboration/live-share)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+## Agenda
 
-## Add your files
+### Part I: Practicing JavaScript ES6 Array Methods with Unit Testing
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+- 📅 Date: 2022-09-19
+- 🧑‍ Facilitator: Joy
+- 🚀 [Getting Started](#Part-I-Practicing-JavaScript-ES6-Array-Methods-with-Unit-Testing1)
 
+### Part II: Knowing Functional Programming and Scaffolding a Modern JavaScript Library
+
+- 📅 Date: 2022-09-26
+- 🧑‍ Facilitator: William
+- 🚀 [Getting Started](#Part-II-Knowing-Functional-Programming-and-Scaffolding-a-Modern-JavaScript-Library1)
+
+###  Part III: Implementing of Higher-Order Functions with Test-Driven Development
+
+- 📅 Date: 2022-10-03
+- 🧑‍ Facilitator: Joy
+- 🚀 [Getting Started](#Part-III-Implementing-of-Higher-Order-Functions-with-Test-Driven-Development1)
+
+### Part IV: Implementing of Method Chaining with OOP
+
+- 📅 Date: 2022-10-17
+- 🧑‍ Facilitator: William
+- 🚀 [Getting Started](#Part-IV-Implementing-of-Method-Chaining-with-OOP1)
+
+# Handbook
+
+## Part I: Practicing JavaScript ES6 Array Methods with Unit Testing
+
+### Initialize a project
+
+Create a new project. 
+
+```bash
+mkdir js-array-methods
+cd js-array-methods
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/kklab-com/vd/0-1-lab/functional-programming-workshop.git
-git branch -M main
-git push -uf origin main
+
+Open VS Code editor. [[How?]](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+
+```bash
+code .
 ```
 
-## Integrate with your tools
+Create a `package.json` file.
 
-- [ ] [Set up project integrations](https://gitlab.com/kklab-com/vd/0-1-lab/functional-programming-workshop/-/settings/integrations)
+```bash
+npm init --yes
+```
 
-## Collaborate with your team
+### Unit test in JavaScript with Jest
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+Install dependencies. [[How?]](https://jestjs.io/docs/getting-started)
 
-## Test and Deploy
+```bash
+npm install jest --save-dev
+```
 
-Use the built-in continuous integration in GitLab.
+Update `package.json` file, add a `test` command to `scripts` field.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+```json
+{
+  // ...
+  "scripts": {
+    "test": "jest"
+  }
+}
+```
 
-***
+Create an `src` folder.
 
-# Editing this README
+```bash
+mkdir src
+```
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Create an `index.test.js` file in `src` folder.
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+```js
+const sum = (a, b) => {
+  return a + b;
+};
 
-## Name
-Choose a self-explaining name for your project.
+test('adds 1 + 2 to equal 3', () => {
+  expect(sum(1, 2)).toBe(3);
+});
+```
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Run `test` command.
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+```bash
+npm run test
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+> js-array-methods@1.0.0 test
+> jest
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+ PASS  src/index.test.js
+  ✓ adds 1 + 2 to equal 3 (6 ms)
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        0.525 s, estimated 1 s
+Ran all test suites.
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### Unit test for JavaScript array methods
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Create some test cases for JavaScript Array Methods.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+```js
+test('all number are less than 10', () => {
+  const actual = [1, 2, 3, 4, 5].every((n) => n < 10);
+  const expected = true;
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+  expect(actual).toStrictEqual(expected);
+});
+```
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+Run `test` command.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+```bash
+npm run test
+```
 
-## License
-For open source projects, say how it is licensed.
+### Use fake data
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Create a `products.js` file in `src` folder and grab some fake data from [here](https://dummyjson.com/products).
+
+```js
+const products = [
+  // ...
+];
+
+module.exports = products;
+```
+
+Use fake data and create more test cases.
+
+```js
+const products = require('./products');
+
+test('all product prices are less than 5000', () => {
+  const actual = products
+    .every((product) => product.price < 5000);
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+Run `test` command.
+
+```bash
+npm run test
+```
+
+### Solve problems
+
+- Teamwork:
+    - problem A1~A8 for group A
+    - problem B1~B8 for group B
+- Array Methods to use: `every`, `filter`, `find`, `forEach`, `map`, `reduce` and `some`
+
+#### Problem A1
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B1
+
+```js
+test('all products have one image at least', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B2
+
+```js
+test('there is a product which description says "no side effects"', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B3
+
+```js
+```
+
+#### Problem B4
+
+```js
+```
+
+#### Problem B5
+
+```js
+test('the number of Apple smartphones is 2', () => {
+  const actual = products; // FIXME
+  const expected = 2;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B6
+
+```js
+test('the products get over 4.9 rating are fauji and Golden', () => {
+  const actual = products; // FIXME
+  const expected = [{ brand: 'fauji' }, { brand: 'Golden' }];
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B7
+
+```js
+test('the only product of Dry Rose is "Gulab Powder 50 Gram"', () => {
+  const actual = products; // FIXME
+  const expected = 'Gulab Powder 50 Gram';
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B8
+
+```js
+test('the total revenue is 765,200 if all the products sold without discount', () => {
+  const actual = products; // FIXME
+  const expected = 765200;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+## Part II: Knowing Functional Programming and Scaffolding a Modern JavaScript Library
+
+### Initialize a project with Vite
+
+Create a new project. [[How?]](https://vitejs.dev/guide/#scaffolding-your-first-vite-project)
+
+```bash
+npm create vite@latest
+✔ Project name: … collection-js
+✔ Select a framework: › vanilla
+✔ Select a variant: › vanilla-ts
+```
+
+Install dependencies.
+
+```bash
+cd collection-js
+npm install
+```
+
+Open VS Code editor. [[How?]](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+
+```bash
+code .
+```
+
+### Initialize a Git repository
+
+Write an initial commit message.
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+Create a repository from [GitHub](https://github.com/).
+
+Push commits to remote.
+
+```bash
+git remote add origin git@github.com:<username>/collection-js.git
+git push -u origin main
+```
+
+### Tidy up the project
+
+Remove sample files.
+
+```bash
+rm src/*
+```
+
+Write a new commit message.
+
+```bash
+git add .
+git commit -m "Remove sample files"
+```
+
+### Build with library mode
+
+Create a `vite.config.js` file. [[How?]](https://vitejs.dev/guide/build.html#library-mode)
+
+```js
+import { resolve } from 'path';
+import { defineConfig } from 'vite';
+
+export default defineConfig({
+  build: {
+    lib: {
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'CollectionJS',
+      fileName: 'collection-js',
+    },
+    rollupOptions: {
+      external: [],
+      output: {
+        globals: {
+        },
+      },
+    },
+  },
+});
+```
+
+Install dependencies.
+
+```bash
+npm i @types/node --save-dev
+```
+
+Create a `index.ts` file in `src` folder as an entry point.
+
+```js
+const hello = () => {
+  console.log('Hello');
+};
+
+export {
+  hello,
+};
+```
+
+Update `package.json` file.
+
+```json
+{
+  // ...
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/collection-js.umd.cjs",
+  "module": "./dist/collection-js.js",
+  "exports": {
+    ".": {
+      "import": "./dist/collection-js.js",
+      "require": "./dist/collection-js.umd.cjs"
+    }
+  },
+}
+```
+
+Run `build` command.
+
+```bash
+npm run build
+```
+
+#### Try with UMD module
+
+Update `index.html` file.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ... -->
+  <body>
+    <div id="app"></div>
+    <script src="/dist/collection-js.umd.cjs"></script>
+    <script>
+      window.CollectionJS.hello();
+    </script>
+  </body>
+</html>
+```
+
+Start a server.
+
+```bash
+npm run dev
+```
+
+#### Try with ES module
+
+Update `index.html` file.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ... -->
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/dist/collection-js"></script>
+    <script type="module">
+      import { hello } from '/dist/collection-js';
+      hello();
+    </script>
+  </body>
+</html>
+```
+
+Start a server.
+
+```bash
+npm run dev
+```
+
+#### Tidy up
+
+Fix `index.html` file.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ... -->
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/dist/collection-js"></script>
+  </body>
+</html>
+```
+
+Write a new commit message.
+
+```bash
+git add .
+git commit -m "Add build config"
+```
+
+### Initialize ESLint and EditorConfig
+
+Create a `.editorconfig` file. [[How?]](https://editorconfig.org/)
+
+```editorconfig
+root = true
+
+[*]
+indent_size = 2
+```
+
+Initialize ESLint and install dependencies. [[How?]](https://eslint.org/docs/latest/user-guide/getting-started)
+
+```bash
+npm init @eslint/config
+✔ How would you like to use ESLint? · syntax
+✔ What type of modules does your project use? · esm
+✔ Which framework does your project use? · none
+✔ Does your project use TypeScript? · No / Yes
+✔ Where does your code run? · browser, node
+✔ What format do you want your config file to be in? · JavaScript
+✔ Would you like to install them now? · No / Yes
+✔ Which package manager do you want to use? · npm
+```
+
+Install Airbnb ESLint config and install dependencies. [[How?]](https://www.npmjs.com/package/eslint-config-airbnb)
+
+```bash
+npm install eslint-config-airbnb-typescript \
+    eslint-plugin-import \
+    --save-dev
+```
+
+Update `.eslintrc.cjs` file. [[How?]](https://eslint.org/docs/latest/user-guide/configuring/configuration-files#how-do-overrides-work)
+
+```JS
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true,
+    node: true
+  },
+  overrides: [
+    {
+      files: [
+        'src/**/*.ts',
+        'src/**/*.tsx',
+      ],
+      extends: [
+        'airbnb-typescript/base',
+        'plugin:import/recommended',
+      ],
+      parserOptions: {
+        project: [
+          './tsconfig.json',
+        ],
+      },
+    },
+  ],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
+  plugins: [
+    '@typescript-eslint'
+  ],
+  rules: {
+  },
+};
+```
+
+Update `package.json` file, add a `lint` command to scripts field.
+
+```json
+{
+  "scripts": {
+    // ...
+    "lint": "eslint src"
+  }
+}
+```
+
+Run `lint` command.
+
+```bash
+npm run lint
+```
+
+Write a new commit message.
+
+```bash
+git add .
+git commit -m "Add eslint config"
+```
+
+### Implement a "map" function with TypeScript
+
+Create a `modules` folder in `src` folder.
+
+```bash
+mkdir src/modules
+```
+
+Create a `map.ts` file in `modules` folder, and implement a `map` function.
+
+```js
+const map = (items: Array<any>, callable: Function) => {
+  const res = [];
+  for (let i = 0; i < items.length; i++) {
+    res[i] = callable(items[i]);
+  }
+  return res;
+};
+
+export default map;
+```
+
+Create an `index.ts` file in `modules` folder, then import and export the module.
+
+```js
+import map from './map';
+
+export {
+  map,
+};
+```
+
+### Unit test with Vitest
+
+Install dependencies. [[How?](https://vitest.dev/guide/)]
+
+```bash
+npm i vitest @vitest/coverage-c8 --save-dev
+```
+
+Update `package.json` file, add `test` and `coverage` commands to scripts field.
+
+```json
+{
+  "scripts": {
+    // ...
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  }
+}
+```
+
+Create a `map.test.ts` file in `modules` folder, and write a test case for the `map` function.
+
+```ts
+import { test, expect } from 'vitest';
+import { map } from './index';
+
+test('map', () => {
+  const actual = map([1, 2, 3, 4, 5], (v: number) => v * 2);
+  const expected = [2, 4, 6, 8, 10];
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+Run `test` command.
+
+```bash
+npm run test
+
+> collection-ts@0.0.0 test
+> vitest
+
+
+ DEV  v0.22.1 /Users/memochou/Projects/collection-js
+
+ ✓ src/modules/map.test.ts (1)
+ ✓ src/index.test.ts (11)
+
+Test Files  2 passed (2)
+     Tests  12 passed (12)
+  Start at  23:01:17
+  Duration  950ms (transform 541ms, setup 0ms, collect 140ms, tests 18ms)
+```
+
+Run `coverage` command.
+
+```bash
+npm run coverage
+
+> collection-ts@0.0.0 coverage
+> vitest run --coverage
+
+
+ RUN  v0.22.1 /Users/memochou/Projects/collection-js
+      Coverage enabled with c8
+
+ ✓ src/modules/map.test.ts (1)
+
+Test Files  1 passed (1)
+     Tests  1 passed (1)
+  Start at  23:03:08
+  Duration  1.35s (transform 447ms, setup 0ms, collect 50ms, tests 3ms)
+
+ % Coverage report from c8
+----------|---------|----------|---------|---------|-------------------
+File      | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+----------|---------|----------|---------|---------|-------------------
+All files |     100 |      100 |     100 |     100 |                   
+ index.ts |     100 |      100 |     100 |     100 |                   
+ map.ts   |     100 |      100 |     100 |     100 |                   
+----------|---------|----------|---------|---------|-------------------
+```
+
+Update `.gitignore` file.
+
+```env
+# ...
+coverage
+```
+
+Write a new commit message.
+
+```bash
+git add .
+git commit -m "Implement map function"
+```
+
+## Part III: Implementing of Higher-Order Functions with Test-Driven Development
+
+### The three rules of TDD
+
+Robert C. Martin provides [a concise set of rules](http://butunclebob.com/ArticleS.UncleBob.TheThreeRulesOfTdd) for practicing TDD.
+
+1. You are not allowed to write any production code unless it is to make a failing unit test pass.
+2. You are not allowed to write any more of a unit test than is sufficient to fail; and compilation failures are failures.
+3. You are not allowed to write any more production code than is sufficient to pass the one failing unit test.
+
+### Write a test case for “filter” function
+
+Create a `filter.test.ts` file in `modules` folder, and write a test case for `filter` function.
+
+```ts
+import { test, expect } from 'vitest';
+import { filter } from './index';
+
+test('filter', () => {
+  const actual = filter([1, 2, 3, 4, 5], (v: number) => v > 2);
+  const expected = [3, 4, 5];
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+Run `test` command.
+
+```bash
+npm run test
+
+🔴 FAIL  src/modules/filter.test.ts > filter
+TypeError: filter is not a function
+```
+
+### Implement the “filter” function
+
+Update `index.ts` file in `modules` folder.
+
+```ts
+// ...
+import filter from './filter';
+
+export {
+  // ...
+  filter,
+};
+```
+
+Create a `filter.ts` file in `modules` folder, and implement the `filter` function.
+
+```ts
+const filter = (items: Array<any>, callable: Function) => {
+  const res = [];
+  for (let i = 0; i < items.length; i++) {
+    if (callable(items[i])) {
+      res.push(items[i]);
+    }
+  }
+  return res;
+};
+
+export default filter;
+```
+
+Run `test` command.
+
+```bash
+npm run test
+
+🟢 PASS  Waiting for file changes...
+```
+
+### Implement more higher-order functions with TDD
+
+- [ ] every
+- [x] filter
+- [ ] find
+- [ ] forEach
+- [x] map
+- [ ] reduce
+- [ ] reject
+- [ ] some
+
+## Part IV: Implementing of Method Chaining with OOP
+
+### Example of method chaining
+
+- JavaScript: https://lodash.com/docs/4.17.15#chain
+- PHP: https://laravel.com/docs/9.x/collections
+
+```js
+collect([1, 2, 3])
+  .map((v: number) => v * 2)
+  .filter((v: number) => v < 5)
+  .toArray();
+```
+
+### Create a test case for "map" function
+
+Create a `index.test.ts` file in `src` folder.
+
+```js
+import { test, expect } from 'vitest';
+import { collect } from './index';
+
+test('method chaining', () => {
+  const actual = collect([1, 2, 3, 4, 5])
+    .map((v: number) => v * 2)
+    .toArray();
+  const expected = [2, 4, 6, 8, 10];
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+### Implement a "Collection" class
+
+Create a `index.ts` file in `src` folder.
+
+```js
+class Collection {
+  private items;
+
+  constructor(items: Array<any>) {
+    this.items = items;
+  }
+}
+```
+
+Implement a `map` function for the class, and return the class itself.
+
+```js
+import {
+  map,
+} from './modules';
+
+class Collection {
+  private items;
+
+  constructor(items: Array<any>) {
+    this.items = items;
+  }
+
+  map(callable: Function) {
+    this.items = map(this.items, callable);
+    return this;
+  }
+}
+```
+
+Implement a `toArray` function for the class, and return the `items` array.
+
+```js
+class Collection {
+  private items;
+
+  constructor(items: Array<any>) {
+    this.items = items;
+  }
+
+  toArray() {
+    return this.items;
+  }
+}
+```
+
+Create a `collect` helper function, and return an initialized `Collection` instance.
+
+```js
+// ...
+
+const collect = (items: Array<any>): Collection => new Collection(items);
+
+export {
+  collect,
+};
+```
+
+Run `test` command.
+
+```bash
+npm run test
+```
+
+Run `coverage` command.
+
+```bash
+npm run coverage
+```
+
+### Implement more functions for the class
+
+- [ ] every
+- [ ] filter
+- [ ] find
+- [ ] forEach
+- [ ] includes
+- [x] map
+- [ ] reduce
+- [ ] reject
+- [ ] size
+- [ ] some
