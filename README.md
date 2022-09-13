@@ -189,6 +189,97 @@ test('...', () => {
 });
 ```
 
+#### Problem A2
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem A3
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem A4
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem A5
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem A6
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem A7
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem A8
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
 #### Problem B1
 
 ```js
@@ -214,16 +305,6 @@ test('there is a product which description says "no side effects"', () => {
 #### Problem B3
 
 ```js
-```
-
-#### Problem B4
-
-```js
-```
-
-#### Problem B5
-
-```js
 test('the number of Apple smartphones is 2', () => {
   const actual = products; // FIXME
   const expected = 2;
@@ -232,7 +313,7 @@ test('the number of Apple smartphones is 2', () => {
 });
 ```
 
-#### Problem B6
+#### Problem B4
 
 ```js
 test('the products get over 4.9 rating are fauji and Golden', () => {
@@ -243,7 +324,7 @@ test('the products get over 4.9 rating are fauji and Golden', () => {
 });
 ```
 
-#### Problem B7
+#### Problem B5
 
 ```js
 test('the only product of Dry Rose is "Gulab Powder 50 Gram"', () => {
@@ -254,12 +335,38 @@ test('the only product of Dry Rose is "Gulab Powder 50 Gram"', () => {
 });
 ```
 
-#### Problem B8
+#### Problem B6
 
 ```js
 test('the total revenue is 765,200 if all the products sold without discount', () => {
   const actual = products; // FIXME
   const expected = 765200;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B7
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
+
+  expect(actual).toStrictEqual(expected);
+});
+```
+
+#### Problem B8
+
+```js
+const products = require('./products');
+
+test('...', () => {
+  const actual = products; // FIXME
+  const expected = true;
 
   expect(actual).toStrictEqual(expected);
 });
