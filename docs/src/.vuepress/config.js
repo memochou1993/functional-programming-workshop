@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Functional Programming in JavaScript',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -38,12 +38,8 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'GitLab',
+        link: 'https://gitlab.com/kklab-com/vd/0-1-lab/functional-programming-workshop'
       }
     ],
     sidebar: {
@@ -53,7 +49,10 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'part-i',
+            'part-ii',
+            'part-iii',
+            'part-iv',
           ]
         }
       ],
