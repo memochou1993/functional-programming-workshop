@@ -152,8 +152,6 @@ module.exports = products;
 Use fake data and create more test cases.
 
 ```js
-const products = require('./products');
-
 test('all product prices are less than 5000', () => {
   const actual = products
     .every((product) => product.price < 5000);
@@ -179,10 +177,8 @@ npm run test
 #### Problem A1
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -192,10 +188,8 @@ test('...', () => {
 #### Problem A2
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -205,10 +199,8 @@ test('...', () => {
 #### Problem A3
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -218,10 +210,8 @@ test('...', () => {
 #### Problem A4
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -231,10 +221,8 @@ test('...', () => {
 #### Problem A5
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -244,10 +232,8 @@ test('...', () => {
 #### Problem A6
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -257,10 +243,8 @@ test('...', () => {
 #### Problem A7
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -270,10 +254,8 @@ test('...', () => {
 #### Problem A8
 
 ```js
-const products = require('./products');
-
 test('...', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -284,7 +266,7 @@ test('...', () => {
 
 ```js
 test('all products have one image at least', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -295,7 +277,7 @@ test('all products have one image at least', () => {
 
 ```js
 test('there is a product which description says "no side effects"', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
@@ -306,7 +288,7 @@ test('there is a product which description says "no side effects"', () => {
 
 ```js
 test('the number of Apple smartphones is 2', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = 2;
 
   expect(actual).toStrictEqual(expected);
@@ -317,7 +299,7 @@ test('the number of Apple smartphones is 2', () => {
 
 ```js
 test('the products get over 4.9 rating are fauji and Golden', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = [{ brand: 'fauji' }, { brand: 'Golden' }];
 
   expect(actual).toStrictEqual(expected);
@@ -328,7 +310,7 @@ test('the products get over 4.9 rating are fauji and Golden', () => {
 
 ```js
 test('the only product of Dry Rose is "Gulab Powder 50 Gram"', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = 'Gulab Powder 50 Gram';
 
   expect(actual).toStrictEqual(expected);
@@ -339,7 +321,7 @@ test('the only product of Dry Rose is "Gulab Powder 50 Gram"', () => {
 
 ```js
 test('the total revenue is 765,200 if all the products sold without discount', () => {
-  const actual = products; // FIXME
+  const actual = products; // TODO
   const expected = 765200;
 
   expect(actual).toStrictEqual(expected);
@@ -349,11 +331,9 @@ test('the total revenue is 765,200 if all the products sold without discount', (
 #### Problem B7
 
 ```js
-const products = require('./products');
-
-test('...', () => {
-  const actual = products; // FIXME
-  const expected = true;
+test('the top 3 highest discounted product brand are Apple, OPPO and Boho Decor',  () => {
+  const actual = products; // TODO
+  const expected = ['Apple', 'OPPO', 'Boho Decor'];
 
   expect(actual).toStrictEqual(expected);
 });
@@ -362,11 +342,14 @@ test('...', () => {
 #### Problem B8
 
 ```js
-const products = require('./products');
-
-test('...', () => {
-  const actual = products; // FIXME
-  const expected = true;
+test('the number of product brands is 28',  () => {
+  const brands = {};
+  products
+    .forEach((p) => {
+      // TODO
+    });
+  const actual = Object.keys(brands).length;
+  const expected = 28;
 
   expect(actual).toStrictEqual(expected);
 });
