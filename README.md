@@ -26,7 +26,7 @@
 - 🧑‍ Facilitator: William
 - 🚀 [Getting Started](#part-ii-knowing-functional-programming-and-scaffolding-a-modern-javascript-library-1)
 
-###  Part III: Implementing of Higher-Order Functions with Test-Driven Development
+### Part III: Implementing of Higher-Order Functions with Test-Driven Development
 
 - 📅 Date: 2022-10-03
 - 🧑‍ Facilitator: Joy
