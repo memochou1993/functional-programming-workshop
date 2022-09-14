@@ -345,7 +345,7 @@ test('the top 3 highest discounted product brand are Apple, OPPO and Boho Decor'
 test('the number of product brands is 28',  () => {
   const brands = {};
   products
-    .forEach((p) => {
+    .forEach((product) => {
       // TODO
     });
   const actual = Object.keys(brands).length;
