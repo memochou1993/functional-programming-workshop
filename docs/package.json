@@ -1,0 +1,19 @@
+{
+  "name": "functional-programming-workshop",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "authors": {
+    "name": "William Chou",
+    "email": "williamchou@kklab.com"
+  },
+  "repository": "https://gitlab.com/kklab-com/vd/0-1-lab/functional-programming-workshop/functional-programming-workshop",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
