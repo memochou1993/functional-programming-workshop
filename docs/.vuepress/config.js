@@ -1,6 +1,7 @@
 const { description } = require('../../package')
 
 module.exports = {
+  base: '/vd/0-1-lab/functional-programming-workshop/',
   dest: 'public',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
