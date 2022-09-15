@@ -97,7 +97,7 @@ npm run test
 
 ## Use fake data
 
-Create a `products.js` file in `src` folder, and grab some fake data from [here](/products.json).
+Create a `products.js` file in `src` folder, and grab some fake data from [here](../products.json).
 
 ```js
 const products = [
