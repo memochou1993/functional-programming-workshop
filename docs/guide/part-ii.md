@@ -353,7 +353,7 @@ Create a `map.test.ts` file in `modules` folder, and create a test case for the 
 import { test, expect } from 'vitest';
 import { map } from './index';
 
-test('map', () => {
+test('map should work', () => {
   const actual = map([1, 2, 3, 4, 5], (v: number) => v * 2);
   const expected = [2, 4, 6, 8, 10];
 

@@ -22,7 +22,7 @@ Create an `index.test.ts` file in `src` folder.
 import { test, expect } from 'vitest';
 import { collect } from './index';
 
-test('map', () => {
+test('map should work', () => {
   const actual = collect([1, 2, 3, 4, 5])
     .map((v: number) => v * 2)
     .toArray();
