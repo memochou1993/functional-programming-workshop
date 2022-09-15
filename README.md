@@ -1,1 +1,2 @@
-# Functional Programming Workshop
+Functional Programming Workshop
+===
