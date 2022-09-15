@@ -127,6 +127,8 @@ npm run test
 
 ## Solve problems
 
+These problems are for practice purposes only and the function that should be tested is hidden at first.
+
 ### Group A
 
 #### Problem 1
