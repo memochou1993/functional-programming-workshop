@@ -37,3 +37,7 @@
 - 📅 Date: 2022-10-17
 - 🧑‍ Facilitator: William
 - 🚀 [Getting Started](/guide/part-iv.html)
+
+## Requirements
+
+- Node.js 16 or above
