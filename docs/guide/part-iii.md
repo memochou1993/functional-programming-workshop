@@ -89,3 +89,40 @@ Finally, run `coverage` command.
 ```bash
 npm run coverage
 ```
+
+## Publish to NPM
+
+Build the package before publishing.
+
+```bash
+npm run build
+```
+
+Login to NPM.
+
+```bash
+npm login
+```
+
+Update `package.json` file.
+
+```json
+{
+  "name": "@username/collection-js",
+  "private": false,
+  "version": "1.0.0",
+  // ...
+}
+```
+
+Publish to NPM with dry run.
+
+```bash
+npm publish --dry-run
+```
+
+Publish to NPM.
+
+```bash
+npm publish --access=public
+```

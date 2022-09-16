@@ -43,13 +43,13 @@ TypeError: collect is not a function
 
 ## Implement "map" function
 
-Create an `index.ts` file in `src` folder, and create a `Collection` class.
+Update `index.ts` file in `src` folder, and create a `Collection` class.
 
 ```js
 class Collection {
   private items;
 
-  constructor(items: Array<any>) {
+  constructor(items: Array<any> = []) {
     this.items = items;
   }
 }
@@ -63,11 +63,7 @@ import {
 } from './modules';
 
 class Collection {
-  private items;
-
-  constructor(items: Array<any>) {
-    this.items = items;
-  }
+  // ...
 
   map(callable: Function) {
     this.items = map(this.items, callable);
@@ -127,4 +123,100 @@ Finally, run `coverage` command.
 
 ```bash
 npm run coverage
+```
+
+## Publish to NPM
+
+Build the package before publishing.
+
+```bash
+npm run build
+```
+
+Login to NPM.
+
+```bash
+npm login
+```
+
+Update `package.json` file.
+
+```json
+{
+  "name": "@username/collection-js",
+  "private": false,
+  "version": "1.1.0",
+  // ...
+}
+```
+
+Publish to NPM with dry run.
+
+```bash
+npm publish --dry-run
+```
+
+Publish to NPM.
+
+```bash
+npm publish --access=public
+```
+
+## Use package
+
+### Try with UMD module
+
+Update `index.html` file.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ... -->
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/@username/collection-js"></script>
+    <script>
+      const res = window.CollectionJS.collect([1, 2, 3, 4, 5])
+        .map((v) => v * 2)
+        .toArray();
+
+      console.log(res);
+    </script>
+  </body>
+</html>
+```
+
+### Try with ES module
+
+Install dependencies.
+
+```bash
+npm i @memochou1993/collection-js@latest
+```
+
+Update `index.html` file.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <!-- ... -->
+  <body>
+    <div id="app"></div>
+    <script type="module">
+      import { collect } from '@memochou1993/collection-js';
+
+      const res = collect([1, 2, 3, 4, 5])
+        .map((v) => v * 2)
+        .toArray();
+
+      console.log(res);
+    </script>
+  </body>
+</html>
+```
+
+Start a server.
+
+```bash
+npm run dev
 ```
