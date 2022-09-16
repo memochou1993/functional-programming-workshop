@@ -129,12 +129,10 @@ npm run test
 
 Update `index.test.js` file.
 
-#### Group 1
-
 ```js
 const practice = require('.');
 
-test('case 1 should get the first Huawei product in the list.', () => {
+test('case1 should get the first Huawei product in the list.', () => {
   const actual = practice.case1();
   const expected = {
     "id": 5,
@@ -157,7 +155,7 @@ test('case 1 should get the first Huawei product in the list.', () => {
   expect(actual).toStrictEqual(expected);
 });
 
-test('case 2 should list all smartphones brands, without any duplicate.', () => {
+test('case2 should list all smartphones brands, without any duplicate.', () => {
   const actual = practice.case2();
   const expected = [
     'Apple',
@@ -169,42 +167,42 @@ test('case 2 should list all smartphones brands, without any duplicate.', () => 
   expect(actual).toStrictEqual(expected);
 });
 
-test('case 3 should tell wether all fragrances products have stock over 100.', () => {
+test('case3 should tell wether all fragrances products have stock over 100.', () => {
   const actual = practice.case3();
   const expected = false;
 
   expect(actual).toStrictEqual(expected);
 });
 
-test('case 4 should get the title of the lowest rating product in home-decoration category.', () => {
+test('case4 should get the title of the lowest rating product in home-decoration category.', () => {
   const actual = practice.case4();
   const expected = 'Plant Hanger For Home';
 
   expect(actual).toStrictEqual(expected);
 });
 
-test('case 5 should tell whether there is any product lack of thumbnail.', () => {
+test('case5 should tell whether there is any product lack of thumbnail.', () => {
   const actual = practice.case5();
   const expected = false;
 
   expect(actual).toStrictEqual(expected);
 });
 
-test('case 6 should tell wether all products have discountPercentage.', () => {
+test('case6 should tell wether all products have discountPercentage.', () => {
   const actual = practice.case6();
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
 });
 
-test('case 7 should get the average rating for fragrances, round to 2 decimal places.', () => {
+test('case7 should get the average rating for fragrances, round to 2 decimal places.', () => {
   const actual = practice.case7();
   const expected = 4.35;
 
   expect(actual).toStrictEqual(expected);
 });
 
-test('case 8 should list the discount price for all smartphones, round to 0 decimal places.', () => {
+test('case8 should list the discount price for all smartphones, round to 0 decimal places.', () => {
   const actual = practice.case8();
   const expected = [
     71,
@@ -216,13 +214,6 @@ test('case 8 should list the discount price for all smartphones, round to 0 deci
 
   expect(actual).toStrictEqual(expected);
 });
-
-```
-
-#### Group 2
-
-```js
-const practice = require('.');
 
 test('case9 should determine that all products have one image at least.', () => {
   const actual = practice.case9();
@@ -279,4 +270,53 @@ test('case16 should get the number of product brands.',  () => {
 
   expect(actual).toStrictEqual(expected);
 });
+```
+
+Create `index.js` file.
+
+```js
+const products = require('./products');
+
+const practice = {
+  case1() {
+  },
+  case2() {
+  },
+  case3() {
+  },
+  case4() {
+  },
+  case5() {
+  },
+  case6() {
+  },
+  case7() {
+  },
+  case8() {
+  },
+  case9() {
+  },
+  case10() {
+  },
+  case11() {
+  },
+  case12() {
+  },
+  case13() {
+  },
+  case14() {
+  },
+  case15() {
+  },
+  case16() {
+  },
+};
+
+module.exports = practice;
+```
+
+Solve problems and run `test` command.
+
+```bash
+npm run test
 ```
