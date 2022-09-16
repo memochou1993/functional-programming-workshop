@@ -71,7 +71,7 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'CollectionJS',
-      fileName: 'collection-js',
+      fileName: (format) => `collection-js.${format}.js`,
     },
     rollupOptions: {
       external: [],
@@ -111,12 +111,12 @@ Update `package.json` file.
   "files": [
     "dist"
   ],
-  "main": "./dist/collection-js.umd.cjs",
-  "module": "./dist/collection-js.js",
+  "main": "./dist/collection-js.umd.js",
+  "module": "./dist/collection-js.es.js",
   "exports": {
     ".": {
-      "import": "./dist/collection-js.js",
-      "require": "./dist/collection-js.umd.cjs"
+      "import": "./dist/collection-js.es.js",
+      "require": "./dist/collection-js.umd.js"
     }
   },
 }
@@ -138,7 +138,7 @@ Update `index.html` file.
   <!-- ... -->
   <body>
     <div id="app"></div>
-    <script src="/dist/collection-js.umd.cjs"></script>
+    <script src="/dist/collection-js.umd.js"></script>
     <script>
       window.CollectionJS.hello();
     </script>
