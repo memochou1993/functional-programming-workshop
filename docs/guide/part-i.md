@@ -127,15 +127,15 @@ npm run test
 
 ## Solve problems
 
-These problems are for practice purposes only and the function that should be tested is hidden at first.
+Update `index.test.js` file.
 
-### Group A
-
-#### Problem 1
+#### Group 1
 
 ```js
-test('get the first Huawei product in the list.', () => {
-  const actual = products; // TODO
+const practice = require('.');
+
+test('case 1 should get the first Huawei product in the list.', () => {
+  const actual = practice.case1();
   const expected = {
     "id": 5,
     "title": "Huawei P30",
@@ -156,13 +156,9 @@ test('get the first Huawei product in the list.', () => {
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 2
-
-```js
-test('list all smartphones brands, without any duplicate.', () => {
-  const actual = products; // TODO
+test('case 2 should list all smartphones brands, without any duplicate.', () => {
+  const actual = practice.case2();
   const expected = [
     'Apple',
     'Samsung',
@@ -172,68 +168,44 @@ test('list all smartphones brands, without any duplicate.', () => {
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 3
-
-```js
-test('do all fragrances products have stock over 100?', () => {
-  const actual = products; // TODO
-  const expected = true;
-
-  expect(actual).toStrictEqual(expected);
-});
-```
-
-#### Problem 4
-
-```js
-test('get the title of the lowest rating product in home-decoration category.', () => {
-  const actual = products; // TODO
-  const expected = 'Plant Hanger For Home';
-
-  expect(actual).toStrictEqual(expected);
-});
-```
-
-#### Problem 5
-
-```js
-test('is there any product lack of thumbnail?', () => {
-  const actual = products; // TODO
+test('case 3 should tell wether all fragrances products have stock over 100.', () => {
+  const actual = practice.case3();
   const expected = false;
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 6
+test('case 4 should get the title of the lowest rating product in home-decoration category.', () => {
+  const actual = practice.case4();
+  const expected = 'Plant Hanger For Home';
 
-```js
-test('do all products have discountPercentage?', () => {
-  const actual = products; // TODO
+  expect(actual).toStrictEqual(expected);
+});
+
+test('case 5 should tell whether there is any product lack of thumbnail.', () => {
+  const actual = practice.case5();
+  const expected = false;
+
+  expect(actual).toStrictEqual(expected);
+});
+
+test('case 6 should tell wether all products have discountPercentage.', () => {
+  const actual = practice.case6();
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 7
-
-```js
-test('get the average rating for fragrances, round to 2 decimal places.', () => {
-  const actual = products; // TODO
+test('case 7 should get the average rating for fragrances, round to 2 decimal places.', () => {
+  const actual = practice.case7();
   const expected = 4.35;
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 8
-
-```js
-test('list the discount price for all smartphones, round to 0 decimal places.', () => {
-  const actual = products; // TODO
+test('case 8 should list the discount price for all smartphones, round to 0 decimal places.', () => {
+  const actual = practice.case8();
   const expected = [
     71,
     161,
@@ -244,97 +216,65 @@ test('list the discount price for all smartphones, round to 0 decimal places.', 
 
   expect(actual).toStrictEqual(expected);
 });
+
 ```
 
-### Group B
-
-#### Problem 1
+#### Group 2
 
 ```js
-test('all products have one image at least', () => {
-  const actual = products; // TODO
+const practice = require('.');
+
+test('case9 should determine that all products have one image at least.', () => {
+  const actual = practice.case9();
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 2
-
-```js
-test('there is a product which description says "no side effects"', () => {
-  const actual = products; // TODO
+test('case10 should determine that there is a product which description says "no side effects".', () => {
+  const actual = practice.case10();
   const expected = true;
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 3
-
-```js
-test('the number of smartphones is 5', () => {
-  const actual = products; // TODO
+test('case11 should get the number of smartphones.', () => {
+  const actual = practice.case11();
   const expected = 5;
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 4
-
-```js
-test('the products get over 4.9 rating are fauji and Golden', () => {
-  const actual = products; // TODO
+test('case12 should get the brand of products which get over 4.9 rating.', () => {
+  const actual = practice.case12();
   const expected = [{ brand: 'fauji' }, { brand: 'Golden' }];
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 5
-
-```js
-test('the only product of Dry Rose is "Gulab Powder 50 Gram"', () => {
-  const actual = products; // TODO
+test('case13 should get title of the first product of Dry Rose.', () => {
+  const actual = practice.case13();
   const expected = 'Gulab Powder 50 Gram';
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 6
-
-```js
-test('the total revenue is 765,200 if all the products sold without discount', () => {
-  const actual = products; // TODO
+test('case14 should get the total revenue when all the products sold without discount.', () => {
+  const actual = practice.case14();
   const expected = 765200;
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 7
-
-```js
-test('the top 3 highest discounted product brand are Apple, OPPO and Boho Decor',  () => {
-  const actual = products; // TODO
+test('case15 should get the top 3 highest discounted product brands.',  () => {
+  const actual = practice.case15();
   const expected = ['Apple', 'OPPO', 'Boho Decor'];
 
   expect(actual).toStrictEqual(expected);
 });
-```
 
-#### Problem 8
-
-```js
-test('the number of product brands is 28',  () => {
-  const brands = {};
-  products
-    .forEach((product) => {
-      // TODO
-    });
-  const actual = Object.keys(brands).length;
+test('case16 should get the number of product brands.',  () => {
+  const actual = practice.case16();
   const expected = 28;
 
   expect(actual).toStrictEqual(expected);
