@@ -134,9 +134,25 @@ These problems are for practice purposes only and the function that should be te
 #### Problem 1
 
 ```js
-test('...', () => {
+test('get the first Huawei product in the list.', () => {
   const actual = products; // TODO
-  const expected = true;
+  const expected = {
+    "id": 5,
+    "title": "Huawei P30",
+    "description": "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+    "price": 499,
+    "discountPercentage": 10.58,
+    "rating": 4.09,
+    "stock": 32,
+    "brand": "Huawei",
+    "category": "smartphones",
+    "thumbnail": "https://dummyjson.com/image/i/products/5/thumbnail.jpg",
+    "images": [
+      "https://dummyjson.com/image/i/products/5/1.jpg",
+      "https://dummyjson.com/image/i/products/5/2.jpg",
+      "https://dummyjson.com/image/i/products/5/3.jpg"
+    ]
+  };
 
   expect(actual).toStrictEqual(expected);
 });
@@ -145,9 +161,14 @@ test('...', () => {
 #### Problem 2
 
 ```js
-test('...', () => {
+test('list all smartphones brands, without any duplicate.', () => {
   const actual = products; // TODO
-  const expected = true;
+  const expected = [
+    'Apple',
+    'Samsung',
+    'OPPO',
+    'Huawei',
+  ];
 
   expect(actual).toStrictEqual(expected);
 });
@@ -156,7 +177,7 @@ test('...', () => {
 #### Problem 3
 
 ```js
-test('...', () => {
+test('do all fragrances products have stock over 100?', () => {
   const actual = products; // TODO
   const expected = true;
 
@@ -167,9 +188,9 @@ test('...', () => {
 #### Problem 4
 
 ```js
-test('...', () => {
+test('get the title of the lowest rating product in home-decoration category.', () => {
   const actual = products; // TODO
-  const expected = true;
+  const expected = 'Plant Hanger For Home';
 
   expect(actual).toStrictEqual(expected);
 });
@@ -178,9 +199,9 @@ test('...', () => {
 #### Problem 5
 
 ```js
-test('...', () => {
+test('is there any product lack of thumbnail?', () => {
   const actual = products; // TODO
-  const expected = true;
+  const expected = false;
 
   expect(actual).toStrictEqual(expected);
 });
@@ -189,7 +210,7 @@ test('...', () => {
 #### Problem 6
 
 ```js
-test('...', () => {
+test('do all products have discountPercentage?', () => {
   const actual = products; // TODO
   const expected = true;
 
@@ -200,9 +221,9 @@ test('...', () => {
 #### Problem 7
 
 ```js
-test('...', () => {
+test('get the average rating for fragrances, round to 2 decimal places.', () => {
   const actual = products; // TODO
-  const expected = true;
+  const expected = 4.35;
 
   expect(actual).toStrictEqual(expected);
 });
@@ -211,9 +232,15 @@ test('...', () => {
 #### Problem 8
 
 ```js
-test('...', () => {
+test('list the discount price for all smartphones, round to 0 decimal places.', () => {
   const actual = products; // TODO
-  const expected = true;
+  const expected = [
+    71,
+    161,
+    193,
+    50,
+    53,
+  ];
 
   expect(actual).toStrictEqual(expected);
 });
