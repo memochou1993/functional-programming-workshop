@@ -87,7 +87,7 @@ export default defineConfig({
 Install dependencies.
 
 ```bash
-npm i @types/node --save-dev
+npm install @types/node --save-dev
 ```
 
 Create a `index.ts` file in `src` folder as an entry point.
@@ -162,9 +162,8 @@ Update `index.html` file.
   <!-- ... -->
   <body>
     <div id="app"></div>
-    <script type="module" src="/dist/collection-js"></script>
     <script type="module">
-      import { hello } from '/dist/collection-js';
+      import { hello } from '/dist/collection-js.es.js';
       hello();
     </script>
   </body>
@@ -187,7 +186,6 @@ Fix `index.html` file.
   <!-- ... -->
   <body>
     <div id="app"></div>
-    <script type="module" src="/dist/collection-js"></script>
   </body>
 </html>
 ```
@@ -332,7 +330,7 @@ export {
 Install dependencies. [[?](https://vitest.dev/guide/)]
 
 ```bash
-npm i vitest @vitest/coverage-c8 --save-dev
+npm install vitest @vitest/coverage-c8 --save-dev
 ```
 
 Update `package.json` file, add `test` and `coverage` commands to scripts field.

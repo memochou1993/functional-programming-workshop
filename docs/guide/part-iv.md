@@ -191,7 +191,7 @@ Update `index.html` file.
 Install dependencies.
 
 ```bash
-npm i @memochou1993/collection-js@latest
+npm install @memochou1993/collection-js@latest
 ```
 
 Update `index.html` file.
