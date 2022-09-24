@@ -9,4 +9,4 @@
 ## Links
 
 - [Slide](https://docs.google.com/presentation/d/14Navycm3I2oFvE0DdUNzVtvLhRRs1BM_V2xTy_azRt0/edit?usp=sharing)
-- [Handbook](https://kklab-com.gitlab.io/vd/0-1-lab/functional-programming-workshop)
+- [Handbook](https://memochou1993.github.io/functional-programming-workshop/)
